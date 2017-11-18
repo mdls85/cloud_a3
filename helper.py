@@ -57,7 +57,7 @@ def build_json_obj(id, name, price, time):
     return data_obj
 
 def build_host_name():
-    uri = 'https://' + namespace + '.servicebus.window.net/' + queue_name
+    uri = 'https://' + namespace + '.servicebus.windows.net/' + queue_name
     return uri
 
 # generating SAS token for later use

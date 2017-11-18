@@ -43,5 +43,5 @@ class MyLocust(HttpLocust):
     min_wait = 0
     max_wait = 0
     # host to bombard
-    #host = 'https://second-bus.servicebus.window.net/queue'
+    #host = 'https://second-bus.servicebus.windows.net/queue'
     host = helper.build_host_name()
