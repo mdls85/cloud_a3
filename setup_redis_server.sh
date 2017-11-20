@@ -9,4 +9,4 @@ cd redis-4.0.2
 make
 
 wget https://raw.githubusercontent.com/mdls85/cloud_a3/master/redis.conf
-src/redis-server /home/cloud-a3/redis-4.0.2/redis.conf.1
+src/redis-server /home/logan20/redis-4.0.2/redis.conf.1
