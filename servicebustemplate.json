@@ -4,15 +4,11 @@
   "parameters": {
     "serviceBusNamespaceName": {
       "type": "string",
-      "metadata": {
-        "description": "Name of the Service Bus namespace"
-      }
+      "defaultValue" :"HighMarksSB",
     },
     "serviceBusQueueName": {
       "type": "string",
-      "metadata": {
-        "description": "Name of the Queue"
-      }
+      "defaultValue" :"HighMarksSBQueue",
     }
   },
   "variables": {
