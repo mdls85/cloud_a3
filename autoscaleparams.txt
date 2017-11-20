@@ -1,0 +1,56 @@
+{"autoscale_setting_resource_name": "autoscale",
+	"enabled": true,
+	"location": "$location",
+	"notifications": [],
+	"profiles": [{
+		"name": "Auto created scale condition",
+		"capacity": {
+			"minimum": "2",
+			"maximum": "5",
+			"default": "2"
+		},
+		"rules": [{
+				"metricTrigger": {
+					"metricName": "MessageCount",
+					"metricNamespace": "$queueNamespace",
+					"metricResourceUri": "/subscriptions/s1/resourceGroups/rg1/providers/Microsoft.ServiceBus/namespaces/$servicebusName/queues/$queueNamespace",
+					"metricResourceLocation": "$location",
+					"timeGrain": "PT1M",
+					"statistic": "Average",
+					"timeWindow": "PT5M",
+					"timeAggregation": "Average",
+					"operator": "GreaterThan",
+					"threshold": 10000
+				},
+				"scaleAction": {
+					"direction": "Increase",
+					"type": "ChangeCount",
+					"value": "1",
+					"cooldown": "PT5M"
+				}
+			},
+			{
+				"metricTrigger": {
+					"metricName": "MessageCount",
+					"metricNamespace": "$queueNamespace",
+					"metricResourceUri": "/subscriptions/s1/resourceGroups/rg1/providers/Microsoft.ServiceBus/namespaces/$servicebusName/queues/$queueNamespace",
+					"metricResourceLocation": "$location",
+					"timeGrain": "PT1M",
+					"statistic": "Average",
+					"timeWindow": "PT5M",
+					"timeAggregation": "Average",
+					"operator": "LessThan",
+					"threshold": 1000
+				},
+				"scaleAction": {
+					"direction": "Decrease",
+					"type": "ChangeCount",
+					"value": "1",
+					"cooldown": "PT5M"
+				}
+			}
+		]
+	}],
+	"tags": {},
+	"target_resource_uri": "/subscriptions/'$sub'/resourceGroups/myResourceGroupScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/myScaleSet"
+}
