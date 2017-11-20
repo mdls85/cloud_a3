@@ -25,7 +25,7 @@ echo "Please login to azure!"
 #az group create --name $resourceGroupName --location $location <-- working
 
 
-#Create the service bus and queue where the items will be stored
+#Create the service bus and queue where the items will be stored template is at https://github.com/mdls85/cloud_a3/blob/master/servicebustemplate.json
 echo "Creating the service bus and queue to store the items that the generator will store"
 az group deployment create --resource-group $resourceGroupName -n $servicebusName --template-file servicebustemplate.json
 
