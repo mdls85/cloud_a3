@@ -9,7 +9,7 @@ import time
 namespace = 'second-bus'
 queue_name = 'queue'
 key_name = 'test'
-shared_key = 'pLQO2TnFUbvpaXEAKSKAU7qyJB+QAxQ7aYvSIRIfGmY='
+shared_key = 'ZpA/rFoTQcx1p1MeZaZcK9IssgYQwDLpwQG7FliEuOA='
 
 def get_auth_token():
     """
