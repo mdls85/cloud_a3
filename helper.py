@@ -35,12 +35,7 @@ def get_random_product_name():
     return names[random.randint(0, len(names) - 1)]
 
 def get_id(curr_id):
-    # returns either a valid id or id to indicate failure depending on the currId number
-
-    # failure rate of 1 in every 1000 requests, i.e., 0.1% (sending 1 million requests)
-    if curr_id % 1000 == 0:
-        # negative id indicates a failed request
-        return -1
+    # returns id
     return curr_id
 
 def get_random_price():

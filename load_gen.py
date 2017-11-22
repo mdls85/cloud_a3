@@ -18,7 +18,7 @@ class MyTaskSet(TaskSet):
 
         data_obj = helper.build_json_obj(id,name,price,time)
 
-        # increment id regardless of whether failure occurred
+        # increment id
         MyTaskSet.id += 1
 
         # fetching SAS token
