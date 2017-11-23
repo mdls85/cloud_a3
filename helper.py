@@ -6,7 +6,7 @@ import base64
 import random
 import time
 
-namespace = 'second-bus'
+namespace = 'highmarks4e90967c5a1'
 queue_name = 'queue'
 key_name = 'test'
 shared_key = 'Du/fldI/769m+plYGHBXhwxaNrKvh6dtJYvAsqBomyk='
