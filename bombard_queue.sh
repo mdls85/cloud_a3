@@ -1,5 +1,5 @@
 #!/bin/bash
-numRequests=10000
+numRequests=1000000
 hatchRate=1000
 maxSimultaneousClients=1000
 
