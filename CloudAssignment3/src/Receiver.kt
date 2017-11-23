@@ -11,7 +11,7 @@ val FAILURE = 2 //There is a 2% chance that a message will fail
 val MAXPROCESS = 100 // server will batch process 100 messages from the queue in any given cycle
 
 
-val ENDPOINT = "Endpoint=sb://second-bus.servicebus.windows.net/;SharedAccessKeyName=all;SharedAccessKey=wKW8JBxSkA0MjP8btryAyGfJNsw1FTiJY7gluofABnM=;EntityPath=queue"
+val ENDPOINT = "Endpoint=sb://highmarks4e90967c5a1.servicebus.windows.net/;SharedAccessKeyName=test;SharedAccessKey=bvMxMmsRURgFqhlwvbkK5qc8rRzxUrhC91yNOMwCiE0=;EntityPath=queue"
 
 
 

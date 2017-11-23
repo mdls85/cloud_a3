@@ -7,10 +7,7 @@ class HandleStorage {
         var cloudTable : CloudTable?=null
 
         // Define the connection-string with your values.
-        private val storageConnectionString =
-                "DefaultEndpointsProtocol=https;" +
-                        "AccountName=19013258542961;" +
-                        "AccountKey=eVI2H5wQ86TV0/+K5Ew3E8Mb9ZzuMRxhC7XrB5gqLqkE7D/G/5h1HP3tj0mSpZlS7Hj45UkH7W2VA0CpNkp8ew=="
+        private val storageConnectionString ="DefaultEndpointsProtocol=https;AccountName=highmarks4e90967c5a1;AccountKey=melnVizo2qxId1VVy8fEg8xKEhPt2I5ed3pVWapGm4s8EdWR2Cz8px2beTBmEmmEX+OJOeJFSlQS94zlKl/fSw==;EndpointSuffix=core.windows.net"
 
         private val TABLE_NAME = "request"
 
