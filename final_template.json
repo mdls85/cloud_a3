@@ -29,7 +29,7 @@
     },
     "instanceCount": {
       "type": "int",
-	  "defaultValue": 1,
+	  "defaultValue": 2,
       "metadata": {
         "description": "Number of VM instances (100 or less)."
       },
@@ -266,9 +266,9 @@
           {
             "name": "Profile1",
             "capacity": {
-              "minimum": "1",
+              "minimum": "2",
               "maximum": "10",
-              "default": "1"
+              "default": "2"
             },
             "rules": [
               {
@@ -329,7 +329,7 @@
                         "capacity": {
                             "minimum": "2",
                             "maximum": "10",
-                            "default": "3"
+                            "default": "2"
                         },
                         "rules": [
                             {
