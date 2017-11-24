@@ -259,13 +259,16 @@
 				"[concat('Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]"
 			],
             "properties": {
+				"enabled": true,
+                "name": "autoscalequeue",
+                "targetResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]",
                 "profiles": [
                     {
                         "name": "ProfileQ",
                         "capacity": {
                             "minimum": "2",
                             "maximum": "10",
-                            "default": "4"
+                            "default": "3"
                         },
                         "rules": [
                             {
@@ -347,10 +350,7 @@
 							
                         ]
                     }
-                ],
-                "enabled": true,
-                "name": "autoscalequeue",
-                "targetResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]"
+                ]
 			}
 	},
 	{
