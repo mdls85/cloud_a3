@@ -29,7 +29,6 @@
     },
     "instanceCount": {
       "type": "int",
-	  "defaultValue": 2,
       "metadata": {
         "description": "Number of VM instances (100 or less)."
       },
@@ -181,7 +180,7 @@
         "capacity": "[parameters('instanceCount')]"
       },
       "properties": {
-        "overprovision": "true",
+        "overprovision": "false",
         "upgradePolicy": {
           "mode": "Manual"
         },
@@ -324,7 +323,7 @@
                 "scaleAction": {
                   "direction": "Increase",
                   "type": "ChangeCount",
-                  "value": "2",
+                  "value": "1",
                   "cooldown": "PT1M"
                 }
               },
