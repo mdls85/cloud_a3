@@ -327,9 +327,9 @@
                     {
                         "name": "Auto created scale condition 1",
                         "capacity": {
-                            "minimum": "1",
+                            "minimum": "2",
                             "maximum": "10",
-                            "default": "1"
+                            "default": "3"
                         },
                         "rules": [
                             {
@@ -342,13 +342,13 @@
                                     "timeWindow": "PT5M",
                                     "timeAggregation": "Average",
                                     "operator": "GreaterThan",
-                                    "threshold": 200000
+                                    "threshold": 1000
                                 },
                                 "scaleAction": {
                                     "direction": "Increase",
                                     "type": "ChangeCount",
-                                    "value": "1",
-                                    "cooldown": "PT5M"
+                                    "value": "2",
+                                    "cooldown": "PT1M"
                                 }
                             },
                             {
@@ -361,13 +361,13 @@
                                     "timeWindow": "PT5M",
                                     "timeAggregation": "Average",
                                     "operator": "LessThan",
-                                    "threshold": 10000
+                                    "threshold": 200
                                 },
                                 "scaleAction": {
                                     "direction": "Decrease",
                                     "type": "ExactCount",
                                     "value": "1",
-                                    "cooldown": "PT2M"
+                                    "cooldown": "PT1M"
                                 }
                             }
                         ]
