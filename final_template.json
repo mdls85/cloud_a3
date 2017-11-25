@@ -252,7 +252,7 @@
     },
 	{
     "type": "Microsoft.Insights/autoscaleSettings",
-            "name": "autoscalequeue",
+            "name": "autoscaleq",
             "apiVersion": "2015-04-01",
             "location": "[resourceGroup().location]",
 			"dependsOn": [
@@ -260,7 +260,7 @@
 			],
             "properties": {
 				"enabled": true,
-                "name": "autoscalequeue",
+                "name": "autoscaleq",
                 "targetResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]",
                 "profiles": [
                     {
