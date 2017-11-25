@@ -181,7 +181,7 @@
         "capacity": "[parameters('instanceCount')]"
       },
       "properties": {
-        "overprovision": "false",
+        "overprovision": "true",
         "upgradePolicy": {
           "mode": "Manual"
         },
@@ -268,7 +268,7 @@
                         "capacity": {
                             "minimum": "2",
                             "maximum": "10",
-                            "default": "2"
+                            "default": "3"
                         },
                         "rules": [
                             {
@@ -278,10 +278,10 @@
                                     "metricResourceUri": "/subscriptions/d494b561-b40d-4b16-a8d1-d4a6bdcf54b2/resourceGroups/STORAGE_FOR_ALL2/providers/Microsoft.ServiceBus/namespaces/highmarks4e90967c5a1/queues/queue",
                                     "timeGrain": "PT1M",
                                     "statistic": "Average",
-                                    "timeWindow": "PT5M",
+                                    "timeWindow": "PT3M",
                                     "timeAggregation": "Average",
                                     "operator": "GreaterThan",
-                                    "threshold": 1000
+                                    "threshold": 500
                                 },
                                 "scaleAction": {
                                     "direction": "Increase",
@@ -297,10 +297,10 @@
                                     "metricResourceUri": "/subscriptions/d494b561-b40d-4b16-a8d1-d4a6bdcf54b2/resourceGroups/STORAGE_FOR_ALL2/providers/Microsoft.ServiceBus/namespaces/highmarks4e90967c5a1/queues/queue",
                                     "timeGrain": "PT1M",
                                     "statistic": "Average",
-                                    "timeWindow": "PT5M",
+                                    "timeWindow": "PT3M",
                                     "timeAggregation": "Average",
                                     "operator": "LessThan",
-                                    "threshold": 200
+                                    "threshold": 100
                                 },
                                 "scaleAction": {
                                     "direction": "Decrease",
@@ -308,46 +308,7 @@
                                     "value": "1",
                                     "cooldown": "PT1M"
                                 }
-                            },
-							{
-                "metricTrigger": {
-                  "metricName": "Percentage CPU",
-                  "metricNamespace": "",
-                  "metricResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]",
-                  "timeGrain": "PT1M",
-                  "statistic": "Average",
-                  "timeWindow": "PT5M",
-                  "timeAggregation": "Average",
-                  "operator": "GreaterThan",
-                  "threshold": 60
-                },
-                "scaleAction": {
-                  "direction": "Increase",
-                  "type": "ChangeCount",
-                  "value": "1",
-                  "cooldown": "PT1M"
-                }
-              },
-              {
-                "metricTrigger": {
-                  "metricName": "Percentage CPU",
-                  "metricNamespace": "",
-                  "metricResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]",
-                  "timeGrain": "PT1M",
-                  "statistic": "Average",
-                  "timeWindow": "PT5M",
-                  "timeAggregation": "Average",
-                  "operator": "LessThan",
-                  "threshold": 20
-                },
-                "scaleAction": {
-                  "direction": "Decrease",
-                  "type": "ChangeCount",
-                  "value": "1",
-                  "cooldown": "PT1M"
-                }
-              }
-							
+                            }
                         ]
                     }
                 ]
